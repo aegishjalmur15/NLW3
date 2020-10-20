@@ -5,7 +5,7 @@ import "express-async-errors";
 
 import "./database/connection";
 import router from "./routes";
-
+let port = process.env.PORT || 8080;
 import errorHandler from "./errors/handle";
 
 const app = express();
@@ -18,4 +18,4 @@ app.use("/uploads", express.static(path.join(__dirname,"..","uploads")))
 app.use(errorHandler)
 
 
-app.listen(3333);
+app.listen(port);

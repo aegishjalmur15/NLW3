@@ -4,7 +4,7 @@ exports.default = {
     render(image) {
         return {
             id: image.id,
-            url: `http://localhost:3333/uploads/${image.path}`
+            url: `https://backendnlw3.herokuapp.com/uploads${image.path}`
         };
     },
     renderMany(images) {
